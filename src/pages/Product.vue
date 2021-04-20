@@ -1,5 +1,6 @@
 <template>
   <div class="Product" v-if="product">
+      <span>V 0.0.1</span>
     <div class="Product__Image">
       <img :src="product.image" alt="product.id" width="550" height="400">
     </div>

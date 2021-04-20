@@ -1,5 +1,5 @@
 <template>
-  <h3 class="txt-align">Panier</h3>
+  <h3 class="txt-align">Panier avec GIT mise en place</h3>
   <div class="row">
     <li class="li-product" v-for="(product,index) in cart" :key="index">
       <div class="product-content d-flex space-between">

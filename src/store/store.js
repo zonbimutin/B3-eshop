@@ -50,6 +50,7 @@ const store = createStore({
     },
     mutations: {
         cartadd (state, value) {
+            console.log("On est trop fork")
             let newCart = [];
             newCart = newCart.concat(state.cart);
             newCart.push(value);

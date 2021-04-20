@@ -1,5 +1,5 @@
 <template>
-  <h2>App</h2>
+  <h2>App v0.0.5</h2>
   <div v-if="user">Bonjour</div>
   <img width="50" v-if="user" alt="profile" src="/profile.png" />
   <button class="butCo" v-if="user"  @click="deconnexion">Déconnexion</button>

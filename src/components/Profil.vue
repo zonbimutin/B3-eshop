@@ -4,7 +4,7 @@
   <img width="50" v-if="user" alt="profile" src="/profile.png" />
   <button class="butCo" v-if="user"  @click="deconnexion">Déconnexion</button>
   <button class="butCo" v-if="!user" @click="afficheLogin">Login</button>
-  <input type="checkbox">
+  <input name="check" type="checkbox">
 
 </template>
 

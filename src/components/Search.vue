@@ -1,23 +1,24 @@
 <template>
   <section>
+    v8.2.3
     <h1>Liste de produits</h1>
     <div class="search-container">
       <label for="search">Recherche:</label>
       <input
-          type="text"
-          id="search"
-          name="search"
-          v-model="searchTerm"
-          @input="onInput"
+        type="text"
+        id="search"
+        name="search"
+        v-model="searchTerm"
+        @input="onInput"
       />
     </div>
     <div class="products">
       <router-link
-          :to="{ name: 'product', params: { id: product.id } }"
-          tag="div"
-          class="product"
-          v-for="product in filteredProducts"
-          :key="product.id"
+        :to="{ name: 'product', params: { id: product.id } }"
+        tag="div"
+        class="product"
+        v-for="product in filteredProducts"
+        :key="product.id"
       >
         <div class="product-illustration">
           <img :src="product.image" />
@@ -31,20 +32,17 @@
 </template>
 
 <script>
-
-import {mapGetters} from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   name: "ProductList",
   computed: {
-    ...mapGetters([
-      'products'
-    ]),
+    ...mapGetters(["products"]),
   },
-  watch : {
-    products () {
+  watch: {
+    products() {
       this.search();
-    }
+    },
   },
   data() {
     return {
@@ -58,16 +56,15 @@ export default {
   },
   methods: {
     search() {
-
       if (this.searchTerm === "") {
         this.filteredProducts = this.products;
       } else {
         this.filteredProducts = this.products.filter((product) => {
           return product.name
-              .toLowerCase()
-              .includes(this.searchTerm.toLowerCase())
-              ? product.name
-              : false;
+            .toLowerCase()
+            .includes(this.searchTerm.toLowerCase())
+            ? product.name
+            : false;
         });
       }
     },
@@ -79,7 +76,7 @@ export default {
         this.search();
         this.searchTimeout = null;
       }, 200);
-    }
+    },
   },
 };
 </script>
@@ -122,7 +119,7 @@ export default {
   margin: 10px;
   padding: 20px;
   box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
-  0 0px 0 1px rgb(10 10 10 / 2%);
+    0 0px 0 1px rgb(10 10 10 / 2%);
   border-radius: 5px;
   display: flex;
   flex-direction: column;

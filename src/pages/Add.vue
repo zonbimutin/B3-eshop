@@ -1,6 +1,7 @@
 <template>
   <div class="AddProduct">
     <h1>Add New Product</h1>
+    <span>v1.0</span>
     <form class="AddProduct__form" @submit="handleFormSubmit" @reset="handleFormReset">
       <div class="form-group AddProduct__input">
         <label for="name">Name:</label>

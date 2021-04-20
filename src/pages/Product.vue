@@ -1,18 +1,18 @@
 <template>
   <div class="Product" v-if="product">
-      <span>V 0.0.1</span>
-    <div class="Product__Image">
-      <img :src="product.image" alt="product.id" width="550" height="400">
-    </div>
-    <div class="Product__Name">
-            <span class="">
-                {{ product.name }}
-            </span>
-    </div>
-    <div class="Product__Button">
-      <button type="submit" @click="addToCart" class="Button_Buy">Ajouter au panier</button>
-    </div>
-  </div>
+        <span>V 0.0.1</span>
+        <div class="Product__Image">
+          <img :src="product.image" alt="product.id" width="550" height="400">
+        </div>
+        <div class="Product__Name">
+                <span class="">
+                    {{ product.name }}
+                </span>
+        </div>
+        <div class="Product__Button">
+          <button type="submit" @click="addToCart" class="Button_Buy">Ajouter au panier</button>
+        </div>
+      </div>
 </template>
 
 <script>

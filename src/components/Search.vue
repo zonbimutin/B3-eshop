@@ -1,6 +1,6 @@
 <template>
   <section>
-    v8.2.3
+    v8.2.5
     <h1>Liste de produits</h1>
     <div class="search-container">
       <label for="search">Recherche:</label>

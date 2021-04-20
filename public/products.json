@@ -1,0 +1,22 @@
+{
+  "products" : [
+    {
+      "id" : 0,
+      "name" : "basket",
+      "image" : "https://images.unsplash.com/photo-1617747000350-4db9f7c3a61c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixlib=rb-1.2.1&q=80&w=400",
+      "price" : 15
+    },
+    {
+      "id" : 1,
+      "name" : "veste",
+      "image" : "https://images.unsplash.com/photo-1617142564550-dc9c751ec9a9?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixlib=rb-1.2.1&q=80&w=400",
+      "price" : 1050
+    },
+    {
+      "id" : 2,
+      "name" : "pantalon",
+      "image" : "https://images.unsplash.com/photo-1617294799972-2e287f25558e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixlib=rb-1.2.1&q=80&w=400",
+      "price" : 30
+    }
+  ]
+}

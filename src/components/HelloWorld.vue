@@ -1,29 +1,47 @@
 <template>
-  <h1>{{ msg }}</h1>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Documentation
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
-  </p>
-
-  <button @click="state.count++">count is: {{ state.count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+  <div>
+    <input type="file" @change="onFileChange" />
+  </div>
 </template>
 
-<script setup>
-import { defineProps, reactive } from 'vue'
+<script>
+import {mapGetters} from "vuex";
 
-defineProps({
-  msg: String
-})
+export default {
+  computed: {
+    ...mapGetters([
+      'products'
+    ]),
+  },
+  watch : {
+    products () {
+      console.log('products change', this.products.length);
+    }
+  },
+  mounted() {
+    console.log('products',this.products.length);
 
-const state = reactive({ count: 0 })
+  },
+  methods : {
+    onFileChange(e) {
+
+      const files = e.currentTarget.files;
+
+      if (files.length > 0)
+      {
+        const fileToLoad = files[0];
+        const fileReader = new FileReader();
+
+        fileReader.onload = function(fileLoadedEvent)
+        {
+         console.log('fileLoadedEvent.target.result',fileLoadedEvent.target.result);
+        };
+
+        fileReader.readAsDataURL(fileToLoad);
+      }
+    }
+  }
+}
 </script>
 
 <style scoped>

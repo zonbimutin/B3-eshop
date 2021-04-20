@@ -1,4 +1,5 @@
 <template>
+  v0.0.0
   <Profil />
   <router-view></router-view>
 </template>
